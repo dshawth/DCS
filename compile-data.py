@@ -5,7 +5,8 @@
 import os  #for files in folder
 
 rawFolder = r"X:\Google Drive\School\Dissertation\Results\Raw"
-fields = ["date_time", "system_hash", "uuid", "device_id", "cpu_model", "cpu_sig", "cpu_arch", "memory", "aes_inst", "aes_bench", "flops_bench"]
+fields = ["date_time", "system_hash", "uuid", "device_id", "cpu_model", \
+"cpu_sig", "cpu_arch", "memory", "aes_inst", "aes_bench", "flops_bench"]
 
 outFile = open("results.csv", 'w')
 
@@ -35,4 +36,3 @@ for fileName in os.listdir(rawFolder):
                 outFile.write(','.join(lines))
                 lines = []
 outFile.close()
-        
